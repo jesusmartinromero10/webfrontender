@@ -7,10 +7,14 @@
     <title>The Frontender</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Gugi&family=Monda:wght@700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Gugi&family=Monda:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">  
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/descargas.css">
+    <link rel="stylesheet" href="./css/form.css">
+    
 </head>
 <body>
     <nav class="navbar">
@@ -23,15 +27,22 @@
             <li class="navbar-item"><a href="#dirty-coders">Dirty Coders</a></li>
         </ul>
     </nav>
-    <header>
-        <h1 class="logo">the Front<span>ender</span></h1>
-        <p>Enfrentate a tus bugs</p>
-        <p>Adéntrate en un mundo lleno de pixeles, lintings y protocolos que te
+
+    <header class="header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 class="logo">the Front<span>ender</span></h1>
+        <p class="tagline">Enfrentate a tus bugs</p>
+        <p class="promo-text">Adéntrate en un mundo lleno de pixeles, lintings y protocolos que te
             acechan tras cada línea de código. ¿Te atreves?
         </p>
-     <img src="./img/bg.jpg" alt="Imagen de nuestra protagonista">   
+
+
+        </div>
+        
+        
     </header>
-    <main>
+    <main class=container>
         <section id="el-juego">
             <h1>El Juego</h1>
             <p>
@@ -68,18 +79,48 @@
             Existen versiones del juego en diferentes plataformas y, por supuesto
             online. Elige la que más te guste y ¡comienza a jugar!
             </p>
-            <ul>
-                <li><a href="#">PC</a></li>
-                <li><a href="#">XBOX</a></li>
-                <li><a href="#">PS4</a></li>
-                <li><a href="#">WEB</a></li>
-                <li><a href="#">PEGI16</a></li>
+            <ul class="descargas">
+                <li><a href="#"><img src="../src/img/plataforma/pc.png" alt="pc"></a></li>
+                <li><a href="#"><img src="../src/img/plataforma/xbox.png" alt="xbox"></a></li>
+                <li><a href="#"><img src="../src/img/plataforma/ps4.png" alt="ps4"></a></li>
+                <li><a href="#"><img src="../src/img/plataforma/www.png" alt="web"></a></li>
+                <li><a href="#"><img src="../src/img/plataforma/pegi.png" alt="pegi16"></a></li>
             </ul>
                        
         </section>
         <section id="comunidad">
             <H1>Comunidad</H1>
-            <p>Crear formulario descripcion</p>
+            <form action="" id="subcribe">
+                <p>
+                    <label for="nombre">nombre</label>
+                    <input type="text" name="nombre" id="form-nombre" placeholder="Quien eres">
+                </p>
+
+                <p>
+                    <label for="email">correo electronico</label>
+                    <input type="email" name="email" id="form.email" placeholder="Tu email">
+                </p>
+
+                <p>
+                    <label for="alias">Alias</label>
+                    <input type="text" name="alias" id="form-alias" placeholder="¿tienes alias para el juego?">
+
+                </p>
+
+                <p>
+                    <input type="checkbox" name="boletin" id="form-boletin">
+                    <label for="boletin">¿Quieres unirte a nuestro boletin?</label>
+                </p>
+
+                <p>
+                    <label for="bio">Sobre ti</label>
+                    <textarea name="bio" id="form-bio" cols="10" placeholder="cuentanos algo sobre ti"></textarea>
+                </p>
+
+                <p>
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
 
         </section>
         <section id="galeria">
